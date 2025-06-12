@@ -1,0 +1,474 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header com logo */
+.header {
+    /*background: linear-gradient(to right, #ff9900, #ffcc33);*/
+    padding: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+
+/* Carrossel */
+.carrossel {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 320px;
+    margin: 0 10px;
+    border-radius: 8px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer a {
+    color: #25d366;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .descricao {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .carousel-images img {
+        width: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .carousel-btn {
+        font-size: 1.5rem;
+    }
+}
+
+:root {
+    --primary-color: #0A1128;
+    --white-color: #FFFFFF;
+    --gap: 3rem;
+}
+
+.intro-content {
+    position: relative;
+    display: grid;
+    padding-top: 3rem;
+    grid-template-columns: 1fr 0.5fr;
+    gap: var(--gap);
+    min-height: 100vh;
+}
+
+.intro-text,
+.intro-img {
+    display: flex;
+    padding-bottom: 4rem;
+    align-items: center;
+    
+    flex-flow: column wrap;
+    justify-content: center;
+
+}
+
+.intro-text h2,
+.intro-text2 h2 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+    color: rgb(64,64,150);
+}
+
+.intro-text p,
+.intro-text2 p {
+    line-height: 1.5;
+}
+
+.intro-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section2 {
+    position: relative;
+    display: flex;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 60rem;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+
+}
+
+.section2 p {
+    text-align: center;
+}
+
+.container-top3 {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 3rem;
+}
+
+.container-top3 h2 {
+    margin: 4rem 0;
+    font-weight: 400;
+}
+
+.container-top3>p {
+    margin-top: -3rem;
+    margin-bottom: 4rem;
+}
+
+.grid-top3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: gridCounter;
+    margin: 4rem 0;
+    align-items: baseline;
+
+}
+
+
+.grid-top3 h3 {
+    font-size: 2rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+    font-weight: 100;
+}
+
+.grid-top3 h3::before {
+    counter-increment: gridCounter;
+    content: counter(gridCounter);
+    position: absolute;
+    font-size: 7rem;
+    font-style: italic;
+    font-weight: 800;
+    top: 0rem;
+    left: -1rem;
+    transform: rotate(5deg);
+}
+
+.container-gallery {
+    display: flex;
+    flex-flow: column wrap;
+    min-height: 100vh;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    padding: 6rem 3rem;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+    gap: var(--gap);
+    margin-top: 4rem;
+}
+
+
+.grid-gallery h3 {
+    font-size: 3rem;
+    padding-left: 5rem;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+    font-weight: 100;
+}
+
+.grid-img {
+    height: 20rem;
+    overflow: hidden;
+}
+
+.grid-img img {
+    transition: all 300ms ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.grid-gallery img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.intro-content2 {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: var(--gap);
+    min-height: 100vh;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.intro-text2 {
+    display: flex;
+    padding: 2rem 0;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.form {
+    grid-column: span 2;
+}
+
+.form-grid {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.form-grid legend {
+    font-style: italic;
+    font-style: 1.4rem;
+}
+
+.form-group {
+    flex-grow: 1;
+
+}
+
+.form-group label {
+    display: block;
+}
+
+.form-group input,
+textarea {
+    border: none;
+    background: var(--white-color);
+    padding: 1.2rem 1.8rem;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.form-group input:focus,
+textarea:focus {
+    box-shadow: 0 0 10px 2px cadetblue;
+}
+
+textarea {
+    height: 20rem;
+}
+
+.form button {
+    border: 0.5rem solid var(--white-color);
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1.2rem 1.8rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.form button:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.footer {
+    text-align: center;
+}
+
+.back-to-top::after {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--primary-color);
+    content: '^';
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: 0.5rem solid hsla(51, 96%, 41%, 0.61);
+    border-radius: 5%;
+    line-height: 3rem;
+    width: 2.5rem;
+    height: 3rem;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 50rem) {
+
+    .intro-content {
+        grid-template-columns: 1fr;
+
+    }
+
+    .intro-img img {
+        width: 40%;
+    }
+
+
+    .intro-content2>:nth-child(1),
+    .intro-content2>:nth-child(2) {
+        grid-column: span 2;
+
+    }
+
+    .grid-gallery,
+    .grid-top3 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-top3>:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    .menu {
+        bottom: 0px;
+        text-align: center;
+        display: none;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .menu-content,
+    .menu-content ul {
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
+    
+    .menu-content ul li{
+        border-right: 0;
+        margin-bottom: 3rem;
+    }
+
+    .close-menu {
+        position: fixed;
+        z-index: 3;
+        opacity: 0;
+    }
+
+    .close-menu-label::after {
+        content: '≡';
+        position: fixed;
+        z-index: 4;
+        top: 2rem;
+        right: 2rem;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        border: 0.5rem solid hsla(51, 96%, 41%, 0.61);
+        border-radius: 5%;
+        line-height: 3rem;
+        width: 2.5rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+}
+
+@media (max-width: 35rem) {
+
+    .grid-gallery,
+    .grid-top3 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-top3> :nth-child(3) {
+        grid-column: auto;
+        /* Remove o span de colunas, já que será uma única coluna */
+    }
+
+    .grid-gallery img {
+        height: 30rem;
+    }
+
+
+
+}

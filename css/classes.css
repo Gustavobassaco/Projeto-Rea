@@ -1,0 +1,29 @@
+.main-bg {
+    background-color: rgb(240, 244, 245);
+}
+
+.white-bg {
+    background: var(--white-color);
+    color: var(--prmary-color);
+}
+
+.full-width{
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.main-content {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 4rem 0 4rem;
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.menu-spacing{
+    height: 0rem;
+    
+}
+

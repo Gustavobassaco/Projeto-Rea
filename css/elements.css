@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans','sans-serif';
+}
+
+h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 4.5rem;
+}
+
+h5 {
+    font-size: 4rem;
+}
+
+h6 {
+    font-size: 3.5rem;
+}
+
+table{
+    width: 100%;
+    min-width: 35rem;
+    border-collapse: collapse;
+}
+
+table caption{
+    font-style: italic;
+    font-style:  1.4rem;
+    text-align: left;
+    margin-bottom: 0.8rem;
+}
+
+table td, table th{
+    white-space: nowrap; /* Para de quebra a linha*/
+    padding: 0.8rem;
+    border: 0.1rem solid lightgray;
+    text-align: left;
+}
+tfoot{
+    background-color: lightgray;
+}
+
+.container-table{
+    overflow-x: auto;
+    width: 100%;
+}
+.container-table table {
+    width: 100%; 
+}

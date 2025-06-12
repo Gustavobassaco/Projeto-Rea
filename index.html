@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REALYSA</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/elements.css">
+    <link rel="stylesheet" href="css/classes.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+    <img src="assets/logo.jpg" alt="Logo Realysa" class="logo">
+    </header>
+
+    <aside class="menu white-bg">
+        <div class="main-content menu-content">
+            <nav>
+                <ul onclick = "getElementById('close-menu').checked = false;">
+                    <li><a href="#intro">Início</a></li>
+                    <li><a href="#top3">Produtos</a></li>
+                    <li><a href="#gallery">Quem somos</a></li>
+                    <li><a href="#work">Resultados</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+
+    <section id="home" class="section main-bg">
+        <div class="main-content intro-content">
+            <div class="intro-text">
+                <h2>Conheça nossos produtos</h2>
+                <p>
+                    Nosso produto Limpa Telha proporciona uma limpeza profunda e eficiente, eliminando sujeiras, fungos e resíduos acumulados ao longo do tempo. Com uma fórmula poderosa e segura, ele restaura o brilho original das superfícies com praticidade e rapidez.
+                    É ideal para aplicações em telhados, muros, calçadas e diversas áreas externas, promovendo não apenas a estética, mas também a valorização do ambiente. Experimente resultados visíveis desde a primeira aplicação!
+                </p>
+            </div>
+            <div class="intro-img">
+                <img src="img/FotoLimpaTelha2.png">
+        </div>
+    </section>
+
+    <!-- Carrossel de imagens -->
+    <section class="carrossel">
+        <h2>Veja os resultados</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn" id="prev">&#10094;</button>
+        <div class="carousel-images">
+            <img src="img/imagem1.png" alt="Antes 1">
+            <img src="img/imagem2.png" alt="Depois 1">
+            <img src="img/imagem3.png" alt="Antes 2">
+            <img src="img/imagem4.png" alt="Depois 2">
+        </div>
+        <button class="carousel-btn" id="next">&#10095;</button>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Entre em contato conosco</p>
+        <a href="https://wa.me/SEUNUMERO" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
