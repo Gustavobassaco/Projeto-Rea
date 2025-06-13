@@ -3,19 +3,29 @@ const nextBtn = document.getElementById('next');
 const carouselImages = document.querySelector('.carousel-images');
 const images = document.querySelectorAll('.carousel-images img');
 
-const imagesPerSlide = 2;
+function getImagesPerSlide() {
+    return window.innerWidth <= 768 ? 1 : 2;
+}
 const totalImages = images.length;
-const imageWidth = 320 + 20; // largura da imagem + margem (10px de cada lado)
-const maxIndex = Math.ceil(totalImages / imagesPerSlide) - 1;
+function getMaxIndex() {
+    return Math.ceil(images.length / getImagesPerSlide()) - 1;
+}
+function getImageWidth() {
+    const firstImage = document.querySelector('.carousel-images img');
+    return firstImage ? firstImage.offsetWidth + 20 : 340; // largura + margem
+}
 
 let currentIndex = 0;
 
 function updateCarousel() {
+    const imageWidth = getImageWidth();
+    const imagesPerSlide = getImagesPerSlide();
     const offset = -(currentIndex * imageWidth * imagesPerSlide);
     carouselImages.style.transform = `translateX(${offset}px)`;
 }
 
 nextBtn.addEventListener('click', () => {
+    const maxIndex = getMaxIndex();
     if (currentIndex < maxIndex) {
         currentIndex++;
         updateCarousel();
@@ -72,5 +82,8 @@ images.forEach(img => {
 lightbox.addEventListener('click', () => {
     lightbox.classList.add('hidden');
     lightboxImg.src = '';
+});
+window.addEventListener('resize', () => {
+    updateCarousel();
 });
 updateCarousel();
