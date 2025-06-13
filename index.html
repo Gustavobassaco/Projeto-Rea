@@ -12,12 +12,18 @@
     <link rel="stylesheet" href="css/classes.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+<div id="lightbox" class="lightbox hidden">
+    <img id="lightbox-img" src="" alt="Imagem ampliada">
+</div>
 <body>
     <header class="header">
-    <img src="assets/logo.jpg" alt="Logo Realysa" class="logo">
+    <img src="assets/logo1.png" alt="Logo Realysa" class="logo">
     </header>
 
+    <input id="close-menu" class="close-menu"  type="checkbox" aria-label="close-menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close-menu"></label>
     <aside class="menu white-bg">
         <div class="main-content menu-content">
             <nav>
@@ -34,34 +40,82 @@
 
 
     <section id="home" class="section main-bg">
-        <div class="main-content intro-content">
+        <div class="main-content intro-content ">
             <div class="intro-text">
-                <h2>Conheça nossos produtos</h2>
+                <h2>CONHEÇA NOSSOS <br> <span>PRODUTOS</span></h2>
                 <p>
-                    Nosso produto Limpa Telha proporciona uma limpeza profunda e eficiente, eliminando sujeiras, fungos e resíduos acumulados ao longo do tempo. Com uma fórmula poderosa e segura, ele restaura o brilho original das superfícies com praticidade e rapidez.
-                    É ideal para aplicações em telhados, muros, calçadas e diversas áreas externas, promovendo não apenas a estética, mas também a valorização do ambiente. Experimente resultados visíveis desde a primeira aplicação!
+                    Nosso produto <strong>Limpa Telha</strong> proporciona uma limpeza profunda e eficiente,
+                    eliminando sujeiras, fungos e resíduos acumulados ao longo do tempo. Com uma fórmula poderosa e segura,
+                    ele restaura o brilho original das superfícies com praticidade e rapidez.
+                    É ideal para telhados, muros, calçadas e diversas áreas externas. Experimente resultados visíveis desde a primeira aplicação!
                 </p>
+                <a href="#produtos" class="cta-button">Saiba mais</a>
             </div>
             <div class="intro-img">
-                <img src="img/FotoLimpaTelha2.png">
+                <img src="img/FotoLimpaTelha2.png"alt="Produto Limpa Telha">
         </div>
     </section>
 
     <!-- Carrossel de imagens -->
-    <section class="carrossel">
-        <h2>Veja os resultados</h2>
-        <div class="carousel-container">
-            <button class="carousel-btn" id="prev">&#10094;</button>
-        <div class="carousel-images">
-            <img src="img/imagem1.png" alt="Antes 1">
-            <img src="img/imagem2.png" alt="Depois 1">
-            <img src="img/imagem3.png" alt="Antes 2">
-            <img src="img/imagem4.png" alt="Depois 2">
-        </div>
-        <button class="carousel-btn" id="next">&#10095;</button>
+    <section class="section white-bg carrossel">
+        <div class="main-content section2">
+
+            <h2><span class="highlight">Veja os</span> Resultados</h2>
+            <p class="desc-resultados">
+                Transformações reais feitas com nosso produto. Compare o antes e depois de telhados e superfícies restauradas.
+            </p>
+            <div class="carousel-container">
+                <button class="carousel-btn" id="prev">&#10094;</button>
+            <div class="carousel-images">
+                <img src="img/imagem2.png" alt="Antes 1">
+                <img src="img/imagem1.png" alt="Depois 1">
+                <img src="img/imagem4.png" alt="Antes 2">
+                <img src="img/imagem3.png" alt="Depois 2">
+                <img src="img/imagem6.png" alt="Depois 2">
+                <img src="img/imagem5.png" alt="Depois 2">
+                <img src="img/imagem8.png" alt="Depois 2">
+                <img src="img/imagem7.png" alt="Depois 2">
+                <img src="img/imagem9.png" alt="Depois 2">
+                <img src="img/imagem10.png" alt="Depois 2">
+                <img src="img/imagem12.png" alt="Depois 2">
+                <img src="img/imagem11.png" alt="Depois 2">
+                <img src="img/imagem14.png" alt="Depois 2">
+                <img src="img/imagem13.png" alt="Depois 2">
+            </div>
+            <button class="carousel-btn" id="next">&#10095;</button>
+            </div>
         </div>
     </section>
-    </main>
+
+    <section class="section main-bg" id="limpa-telha">
+        <div class="main-content left-content">
+    <!-- Coluna das imagens -->
+            <div class="intro-img-column">
+                <img src="img/FotoLimpaTelha2.png" alt="Produto Limpa Telha">
+                <img src="img/FotoLimpaTelhaVerso.png" alt="Produto Limpa Telha">
+            </div>
+
+            <!-- Coluna do conteúdo -->
+            <div class="content-column">
+                <h2 data-aos="fade-up">Benefícios do Limpa Telha Original Realysa</h2>
+
+                <p data-aos="fade-up" data-aos-delay="100">
+                Há mais de 20 anos no mercado, o Limpa Telha Original da Realysa é um verdadeiro tratamento para telhados, desenvolvido com tecnologia própria e eficácia comprovada em mais de 5 milhões de m² de telhas limpas.
+                </p>
+
+                <ul class="benefits-list">
+                <li data-aos="fade-up" data-aos-delay="200"><strong>Alto poder de limpeza:</strong> pulverize e veja a sujeira desaparecer, sem esfregar.</li>
+                <li data-aos="fade-up" data-aos-delay="300"><strong>Ação rápida e prática:</strong> aplicação simples, com resultados rápidos.</li>
+                <li data-aos="fade-up" data-aos-delay="400"><strong>Alta durabilidade:</strong> protege o telhado por mais tempo.</li>
+                <li data-aos="fade-up" data-aos-delay="500"><strong>Restauração da cor natural:</strong> devolve a aparência original.</li>
+                <li data-aos="fade-up" data-aos-delay="600"><strong>Elimina fungos e microrganismos:</strong> remove mofo, lodo e mais.</li>
+                <li data-aos="fade-up" data-aos-delay="700"><strong>Confiança de quem entende:</strong> mais de duas décadas de excelência.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -72,5 +126,13 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 800,
+        once: true,
+    });
+</script>
+
 </body>
 </html>
