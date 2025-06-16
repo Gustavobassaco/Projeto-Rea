@@ -19,7 +19,9 @@
 </div>
 <body>
     <header class="header">
-    <img src="assets/logo1.png" alt="Logo Realysa" class="logo">
+    <a href="index.html">
+  <img src="assets/logo1.png" alt="Logo Realysa" class="logo" />
+</a>
     </header>
 
     <input id="close-menu" class="close-menu"  type="checkbox" aria-label="close-menu" role="button">
@@ -28,10 +30,9 @@
         <div class="main-content menu-content">
             <nav>
                 <ul onclick = "getElementById('close-menu').checked = false;">
-                    <li><a href="#intro">Início</a></li>
+                    <li><a href="index.html">Início</a></li>
                     <li><a href="#top3">Produtos</a></li>
                     <li><a href="#gallery">Quem somos</a></li>
-                    <li><a href="#work">Resultados</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
@@ -42,18 +43,21 @@
     <section id="home" class="section main-bg">
         <div class="main-content intro-content ">
             <div class="intro-text">
-                <h2>CONHEÇA NOSSOS <br> <span>PRODUTOS</span></h2>
+                <h2>CONHEÇA NOSSOS PRODUTOS</h2>
                 <p>
                     Nosso produto <strong>Limpa Telha</strong> proporciona uma limpeza profunda e eficiente,
-                    eliminando sujeiras, fungos e resíduos acumulados ao longo do tempo. Com uma fórmula poderosa e segura,
+                    eliminando sujeiras, fungos e resíduos acumulados ao longo do tempo. <br>
+                    Com uma fórmula poderosa e segura,
                     ele restaura o brilho original das superfícies com praticidade e rapidez.
                     É ideal para telhados, muros, calçadas e diversas áreas externas. Experimente resultados visíveis desde a primeira aplicação!
                 </p>
                 <a href="#produtos" class="cta-button">Saiba mais</a>
             </div>
             <div class="intro-img">
-                <img src="img/FotoLimpaTelha2.png"alt="Produto Limpa Telha">
-        </div>
+                <a href="Limpa-Telha-Realysa.html">
+                    <img src="img/FotoLimpaTelha2.png" alt="Produto Limpa Telha" class="zoom-on-hover">
+                </a>
+            </div>
     </section>
 
     <!-- Carrossel de imagens -->
@@ -94,14 +98,10 @@
             <a href="Limpa-Telha-Realysa.html">
                 <img src="img/FotoLimpaTelha2.png" alt="Produto Limpa Telha">
             </a>
-            <a href="Limpa-Telha-Realysa.html">
-                <img src="img/FotoLimpaTelhaVerso.png" alt="Produto Limpa Telha">
-            </a>
         </div>
-
             <!-- Coluna do conteúdo -->
             <div class="content-column">
-                <h2 data-aos="fade-up">Benefícios do Limpa Telha Original Realysa</h2>
+                <h2 data-aos="fade-up">Benefícios do <span class="highlight">Limpa Telha Original Realysa</span></h2>
 
                 <p data-aos="fade-up" data-aos-delay="100">
                 Há mais de 20 anos no mercado, o Limpa Telha Original da Realysa é um verdadeiro tratamento para telhados, desenvolvido com tecnologia própria e eficácia comprovada em mais de 5 milhões de m² de telhas limpas.
@@ -110,13 +110,29 @@
                 <ul class="benefits-list">
                 <li data-aos="fade-up" data-aos-delay="200"><strong>Alto poder de limpeza:</strong> pulverize e veja a sujeira desaparecer, sem esfregar.</li>
                 <li data-aos="fade-up" data-aos-delay="300"><strong>Ação rápida e prática:</strong> aplicação simples, com resultados rápidos.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section white-bg" id="limpa-telha">
+        <div class="main-content right-content">
+            <!-- Coluna do conteúdo -->
+            <div class="content-column">
+                <ul class="benefits-list">
                 <li data-aos="fade-up" data-aos-delay="400"><strong>Alta durabilidade:</strong> protege o telhado por mais tempo.</li>
                 <li data-aos="fade-up" data-aos-delay="500"><strong>Restauração da cor natural:</strong> devolve a aparência original.</li>
                 <li data-aos="fade-up" data-aos-delay="600"><strong>Elimina fungos e microrganismos:</strong> remove mofo, lodo e mais.</li>
                 <li data-aos="fade-up" data-aos-delay="700"><strong>Confiança de quem entende:</strong> mais de duas décadas de excelência.</li>
                 </ul>
-                <a href="#contact" class="cta-button" style="margin-top: 3rem; display: inline-block;" data-aos="fade-up" data-aos-delay="800">
+                <a href="Limpa-Telha-Realysa.html" class="cta-button" style="margin-top: 3rem; display: inline-block;" data-aos="fade-up" data-aos-delay="800">
                     Quero esse resultado!
+                </a>
+            </div>
+            <!-- Coluna das imagens -->
+            <div class="intro-img-column">
+                <a href="Limpa-Telha-Realysa.html">
+                    <img src="img/FotoLimpaTelhaVerso.png" alt="Produto Limpa Telha">
                 </a>
             </div>
         </div>
@@ -126,11 +142,34 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>Entre em contato conosco</p>
-        <a href="https://wa.me/SEUNUMERO" target="_blank">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
+    <div class="footer-content">
+        <div class="footer-brand">
+        <img src="img/Logo_Realysa_completa.png" alt="Logo Realysa" class="footer-logo" />
+        <p>Limpeza profissional com mais de <br>20 anos de confiança.</p>
+        </div>
+
+        <div class="footer-links">
+        <h4>Navegue</h4>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#top3">Produtos</a></li>
+            <li><a href="#work">Resultados</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-contact">
+        <h4>Fale conosco</h4>
+        <p><a href="mailto:contato@realysa.com.br">contato@realysa.com.br</a></p>
+        <p><a href="https://wa.me/5521999999999" target="_blank">WhatsApp: (21) 99999‑9999</a></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Realysa Produtos Químicos Ltda. CNPJ 00.000.000/0001-00</p>
+    </div>
     </footer>
+
 
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

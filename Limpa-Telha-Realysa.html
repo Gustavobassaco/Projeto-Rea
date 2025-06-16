@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Limpa Telha Realysa</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/elements.css" />
+    <link rel="stylesheet" href="css/classes.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div id="lightbox" class="lightbox hidden">
+    <img id="lightbox-img" src="" alt="Imagem ampliada" />
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+    <a href="index.html">
+    <img src="assets/logo1.png" alt="Logo Realysa" class="logo" />
+    </a>
+    </header>
+    <input id="close-menu" class="close-menu"  type="checkbox" aria-label="close-menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close-menu"></label>
+    <aside class="menu white-bg">
+        <div class="main-content menu-content">
+            <nav>
+                <ul onclick = "getElementById('close-menu').checked = false;">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#top3">Produtos</a></li>
+                    <li><a href="#gallery">Quem somos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Seção de destaque do produto -->
+    <section class="section main-bg">
+        <div class="main-content intro-content">
+        <div class="intro-text">
+            <!--
+            <h2>Limpa Telha <span>Realysa</span></h2>
+            <p>
+            O <strong>Limpa Telha Original Realysa</strong> é um produto
+            inovador com mais de 20 anos de história no mercado. Com tecnologia
+            própria, ele oferece limpeza profunda e prática de telhados e outras
+            superfícies, eliminando fungos, sujeiras e restaurando a aparência
+            original.
+            </p>
+            <a href="https://wa.me/SEUNUMERO" class="cta-button" target="_blank"
+            >Fale com o Vendedor</a>
+            -->
+            <h2>O fim da sujeira começa <span>agora!</span></h2>
+            <p><strong>20 anos no mercado e centenas de clientes satisfeitos no Brasil!</strong> O Limpa Telha Realysa oferece limpeza profunda e prática de telhados e outras
+            superfícies, eliminando fungos, sujeiras e restaurando a aparência
+            original.</p>
+            <a href="https://wa.me/SEUNUMERO" class="cta-button" target="_blank">Quero limpar meu telhado!</a>
+
+        </div>
+
+        <div class="intro-img">
+            <img
+                src="img/FotoLimpaTelha2.png"
+                alt="Imagem do Produto Limpa Telha"
+                class="zoom-on-hover product-lightbox"
+                style="cursor: zoom-in"
+            />
+        </div>
+        </div>
+    </section>
+
+    <!-- Seção de Detalhes -->
+    <section class="section white-bg">
+    <div class="main-content left-content">
+        <div class="product-image">
+            <img
+                src="img/FotoLimpaTelhaVerso.png"
+                alt="Verso do Produto Limpa Telha"
+                class="zoom-on-hover product-lightbox"
+            />
+        </div>
+        <div class="content-column">
+
+            <h2>Detalhes do <span class="highlight">Produto</span></h2>
+            <div class="content-column">
+                <ul class="benefits-list">
+                    <li data-aos="fade-up" data-aos-delay="100">
+                        <strong>Alto poder de limpeza:</strong> age rapidamente na remoção da sujeira sem necessidade de esfregar, <br>
+                        deixando o telhado limpo em poucos minutos com mínimo esforço.
+                    </li>
+            
+                    <li data-aos="fade-up" data-aos-delay="200">
+                        <strong>Fórmula exclusiva:</strong> desenvolvida para eliminar mofo, lodo e manchas profundas, <br>
+                        garantindo um visual renovado mesmo em telhas antigas.
+                    </li>
+            
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <strong>Proteção prolongada:</strong> forma uma barreira invisível que impede o reaparecimento da sujeira, <br>
+                        mantendo a aparência limpa por muito mais tempo.
+                    </li>
+            
+                    <li data-aos="fade-up" data-aos-delay="400">
+                        <strong>Aplicação prática:</strong> basta pulverizar com um borrifador manual ou elétrico, <br>
+                        facilitando o uso até por quem nunca aplicou produtos semelhantes.
+                    </li>
+            
+                    <li data-aos="fade-up" data-aos-delay="500">
+                        <strong>Versatilidade:</strong> pode ser utilizado em telhados, muros, calçadas, paredes externas e pisos, <br>
+                        oferecendo uma solução completa para a limpeza externa da casa.
+                    </li>
+                </ul>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Seção com QR Code -->
+<!-- Seção com QR Code -->
+    <section class="section main-bg">
+    <div class="main-content qr-section" style="text-align: center;">
+        <h2 class="highlight-title">Aprenda a Utilizar</h2>
+        <p class="qr-instructions">
+        Escaneie o QR Code abaixo presente no produto ou clique na imagem para ver o passo a passo de como aplicar corretamente:
+        </p>
+
+        <a href="https://www.realysa.com.br/limpatelha2025.pdf" target="_blank" class="qr-link">
+        <img src="img/QR-code.png" alt="QR Code para Instruções de Uso" class="qr-image" />
+        </a>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+        <img src="img/Logo_Realysa_completa.png" alt="Logo Realysa" class="footer-logo" />
+        <p>Limpeza profissional com mais de <br>20 anos de confiança.</p>
+        </div>
+
+        <div class="footer-links">
+        <h4>Navegue</h4>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#top3">Produtos</a></li>
+            <li><a href="#work">Resultados</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-contact">
+        <h4>Fale conosco</h4>
+        <p><a href="mailto:contato@realysa.com.br">contato@realysa.com.br</a></p>
+        <p><a href="https://wa.me/5521999999999" target="_blank">WhatsApp: (21) 99999‑9999</a></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Realysa Produtos Químicos Ltda. CNPJ 00.000.000/0001-00</p>
+    </div>
+    </footer>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const productImages = document.querySelectorAll('.product-lightbox');
+
+        let scale = 1;
+
+        productImages.forEach(img => {
+            img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightbox.classList.remove('hidden');
+            scale = 1;
+            lightboxImg.style.transform = 'scale(1)';
+            lightboxImg.style.transformOrigin = 'center center';
+            });
+        });
+
+        // Zoom com foco no cursor
+        lightboxImg.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            
+            const rect = lightboxImg.getBoundingClientRect();
+            const offsetX = e.clientX - rect.left; // posição X do cursor dentro da imagem
+            const offsetY = e.clientY - rect.top;  // posição Y do cursor dentro da imagem
+
+            const percentX = (offsetX / rect.width) * 100;
+            const percentY = (offsetY / rect.height) * 100;
+
+            const delta = e.deltaY < 0 ? 0.1 : -0.1;
+            scale += delta;
+            scale = Math.min(Math.max(1, scale), 3);
+
+            lightboxImg.style.transformOrigin = `${percentX}% ${percentY}%`;
+            lightboxImg.style.transform = `scale(${scale})`;
+        });
+
+        // Clicar fora da imagem fecha o lightbox
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target === lightboxImg) {
+            lightbox.classList.add('hidden');
+            lightboxImg.src = '';
+            scale = 1;
+            lightboxImg.style.transform = 'scale(1)';
+            lightboxImg.style.transformOrigin = 'center center';
+            }
+        });
+    </script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    </script>
+    </body>
+</html>
