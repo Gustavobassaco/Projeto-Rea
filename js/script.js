@@ -39,6 +39,63 @@ prevBtn.addEventListener('click', () => {
     }
 });
 
+const heroSlides = document.querySelector('.hero-slides');
+const heroImages = document.querySelectorAll('.hero-slides a');
+const prevHero = document.querySelector('.hero-btn.prev');
+const nextHero = document.querySelector('.hero-btn.next');
+const dotContainer = document.querySelector('.hero-dots');
+
+let heroIndex = 0;
+let heroInterval;
+
+function updateHeroSlide(index) {
+    heroSlides.style.transform = `translateX(-${index * 100}%)`;
+    document.querySelectorAll('.hero-dots button').forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+}
+
+function createDots() {
+    for (let i = 0; i < heroImages.length; i++) {
+        const dot = document.createElement('button');
+        dot.addEventListener('click', () => {
+            heroIndex = i;
+            updateHeroSlide(heroIndex);
+        });
+        if (i === 0) dot.classList.add('active');
+        dotContainer.appendChild(dot);
+    }
+}
+
+function startAutoHero() {
+    heroInterval = setInterval(() => {
+        heroIndex = (heroIndex + 1) % heroImages.length;
+        updateHeroSlide(heroIndex);
+    }, 4000);
+}
+
+function stopAutoHero() {
+    clearInterval(heroInterval);
+}
+
+prevHero.addEventListener('click', () => {
+    heroIndex = (heroIndex - 1 + heroImages.length) % heroImages.length;
+    updateHeroSlide(heroIndex);
+    stopAutoHero();
+    startAutoHero();
+});
+
+nextHero.addEventListener('click', () => {
+    heroIndex = (heroIndex + 1) % heroImages.length;
+    updateHeroSlide(heroIndex);
+    stopAutoHero();
+    startAutoHero();
+});
+
+createDots();
+startAutoHero();
+
+
 // Função para destacar a imagem clicada
 carouselImages.addEventListener('click', function (e) {
     const clickedImage = e.target;

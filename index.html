@@ -13,14 +13,15 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <div id="lightbox" class="lightbox hidden">
     <img id="lightbox-img" src="" alt="Imagem ampliada">
 </div>
 <body>
     <header class="header">
-    <a href="index.html">
-  <img src="assets/logo1.png" alt="Logo Realysa" class="logo" />
+        <a href="index.html">
+    <img src="assets/logo1.png" alt="Logo Realysa" class="logo" />
 </a>
     </header>
 
@@ -31,7 +32,7 @@
             <nav>
                 <ul onclick = "getElementById('close-menu').checked = false;">
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="#top3">Produtos</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
                     <li><a href="#gallery">Quem somos</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
@@ -39,7 +40,7 @@
         </div>
     </aside>
 
-
+    <!--
     <section id="home" class="section main-bg">
         <div class="main-content intro-content ">
             <div class="intro-text">
@@ -59,6 +60,39 @@
                 </a>
             </div>
     </section>
+    -->
+    <section class="hero-carousel">
+        <div class="carousel-wrapper">
+            <div class="hero-slides">
+            <a href="Limpa-Telha-Realysa.html"><img src="img/imagem2.png" alt="Slide 1" /></a>
+            <a href="Limpa-Telha-Realysa.html"><img src="img/imagem1.png" alt="Slide 2" /></a>
+            <a href="Limpa-Telha-Realysa.html"><img src="img/imagem4.png" alt="Slide 3" /></a>
+            <a href="Limpa-Telha-Realysa.html"><img src="img/imagem3.png" alt="Slide 4" /></a>
+            <a href="Limpa-Telha-Realysa.html"><img src="img/imagem5.png" alt="Slide 5" /></a>
+            </div>
+            <button class="hero-btn prev">&#10094;</button>
+            <button class="hero-btn next">&#10095;</button>
+            <div class="hero-dots"></div>
+        </div>
+    </section>
+
+    <section class="section main-bg">
+        <div class="main-content right-content">
+            <div class="intro-text">
+                <h2><span class="highlight">Sobre</span> a Realysa</h2>
+                <p>
+                    A Realysa é referência em soluções de limpeza há mais de 20 anos. Com produtos testados, resultados comprovados
+                    e a confiança de milhares de clientes, nossa missão é transformar superfícies de forma prática e eficaz.
+                    Atuamos com foco em qualidade, inovação e satisfação.
+                </p>
+            </div>
+            <div class="intro-img">
+                <img src="img/logo_miniatura.png" alt="Nossa Empresa" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);" />
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Carrossel de imagens -->
     <section class="section white-bg carrossel">
@@ -93,10 +127,13 @@
 
     <section class="section main-bg" id="limpa-telha">
         <div class="main-content left-content">
-    <!-- Coluna das imagens -->
+        <!-- Coluna das imagens -->
         <div class="intro-img-column">
             <a href="Limpa-Telha-Realysa.html">
                 <img src="img/FotoLimpaTelha2.png" alt="Produto Limpa Telha">
+            </a>
+            <a href="Limpa-Telha-Realysa.html" class="cta-button" >
+                Compre Agora! <i class="fa fa-whatsapp" style="font-size:24px; margin-left:10px"></i></i>
             </a>
         </div>
             <!-- Coluna do conteúdo -->
@@ -125,14 +162,14 @@
                 <li data-aos="fade-up" data-aos-delay="600"><strong>Elimina fungos e microrganismos:</strong> remove mofo, lodo e mais.</li>
                 <li data-aos="fade-up" data-aos-delay="700"><strong>Confiança de quem entende:</strong> mais de duas décadas de excelência.</li>
                 </ul>
-                <a href="Limpa-Telha-Realysa.html" class="cta-button" style="margin-top: 3rem; display: inline-block;" data-aos="fade-up" data-aos-delay="800">
-                    Quero esse resultado!
-                </a>
             </div>
             <!-- Coluna das imagens -->
             <div class="intro-img-column">
                 <a href="Limpa-Telha-Realysa.html">
                     <img src="img/FotoLimpaTelhaVerso.png" alt="Produto Limpa Telha">
+                </a>
+                <a href="Limpa-Telha-Realysa.html" class="cta-button" >
+                    Compre Agora! <i class="fa fa-whatsapp" style="font-size:24px; margin-left:10px"></i></i>
                 </a>
             </div>
         </div>

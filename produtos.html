@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Limpa Telha Realysa</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/elements.css" />
+    <link rel="stylesheet" href="css/classes.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .store-section {
+        padding: 4rem 2rem;
+        }
+
+        .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        justify-items: center;
+        padding: 2rem;
+        }
+
+        @media (max-width: 900px) {
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        }
+
+    .product-card {
+    width: 250px;
+    height: 320px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  transition: opacity 0.4s ease-in-out;
+
+}
+
+    .product-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 1rem;
+    text-decoration: none;
+    }
+    .product-card {
+    max-width: 250px;
+    width: 100%;
+    }
+    </style>
+    </head>
+
+    <body>
+        <div id="lightbox" class="lightbox hidden">
+    <img id="lightbox-img" src="" alt="Imagem ampliada" />
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+    <a href="index.html">
+    <img src="assets/logo1.png" alt="Logo Realysa" class="logo" />
+    </a>
+    </header>
+    <input id="close-menu" class="close-menu"  type="checkbox" aria-label="close-menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close-menu"></label>
+    <aside class="menu white-bg">
+        <div class="main-content menu-content">
+            <nav>
+                <ul onclick = "getElementById('close-menu').checked = false;">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#top3">Produtos</a></li>
+                    <li><a href="#gallery">Quem somos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <div class="main-content">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Nossos Produtos</h2>
+            <div class="product-grid" id="productGrid">
+            </div>
+                <!-- Produto repetido 10x para teste -->
+                <!-- Substitua as imagens depois -->
+                <!-- Limpa Telha Exemplo -->
+                <!-- Cada produto: -->
+                <!-- Use imagens img/limpatelha1.png, img/limpatelha2.png, img/limpatelha3.png para o loop -->
+                <!-- Link para Limpa-Telha-Realysa.html -->
+                <!-- Repetido abaixo com JS dinamicamente -->
+                <!-- JavaScript irá preencher aqui -->
+            </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+        <img src="img/Logo_Realysa_completa.png" alt="Logo Realysa" class="footer-logo" />
+        <p>Limpeza profissional com mais de <br>20 anos de confiança.</p>
+        </div>
+
+        <div class="footer-links">
+        <h4>Navegue</h4>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="#work">Resultados</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-contact">
+        <h4>Fale conosco</h4>
+        <p><a href="mailto:contato@realysa.com.br">contato@realysa.com.br</a></p>
+        <p><a href="https://wa.me/5521999999999" target="_blank">WhatsApp: (21) 99999‑9999</a></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Realysa Produtos Químicos Ltda. CNPJ 00.000.000/0001-00</p>
+    </div>
+    </footer>
+
+    <script>
+    const produtos = [];
+
+    for (let i = 1; i <= 10; i++) {
+        produtos.push({
+        nome: `Limpa Telha Realysa ${i}`,
+        link: "Limpa-Telha-Realysa.html",
+        imagens: [
+            `img/FotoLimpaTelha2.png`,
+            `img/FotoLimpaTelhaVerso.png`,
+            `img/logo_miniatura.png`,
+        ]
+        });
+    }
+
+    const grid = document.getElementById("productGrid");
+
+    // Função para trocar imagem com transição suave
+    function trocarImagemComTransicao(imagem, novaSrc) {
+        imagem.style.opacity = "0";
+        setTimeout(() => {
+        imagem.src = novaSrc;
+        imagem.style.opacity = "1";
+        }, 200);
+    }
+
+    produtos.forEach((produto) => {
+        const card = document.createElement("div");
+        card.className = "product-card";
+
+        const link = document.createElement("a");
+        link.href = produto.link;
+
+        const img = document.createElement("img");
+        img.src = produto.imagens[0];
+        img.alt = produto.nome;
+
+        link.appendChild(img);
+
+        const title = document.createElement("a");
+        title.href = produto.link;
+        title.className = "product-title";
+        title.innerText = produto.nome;
+
+        card.appendChild(link);
+        card.appendChild(title);
+        grid.appendChild(card);
+
+        // Carrossel de imagem ao passar o mouse
+        let currentIndex = 0;
+        let interval;
+
+        card.addEventListener("mouseenter", () => {
+        interval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % produto.imagens.length;
+            trocarImagemComTransicao(img, produto.imagens[currentIndex]);
+        }, 2000);
+        });
+
+        card.addEventListener("mouseleave", () => {
+        clearInterval(interval);
+        currentIndex = 0;
+        trocarImagemComTransicao(img, produto.imagens[0]);
+        });
+    });
+    </script>
+
+    </body>
+</html>

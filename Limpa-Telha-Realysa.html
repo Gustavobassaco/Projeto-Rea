@@ -34,7 +34,7 @@
             <nav>
                 <ul onclick = "getElementById('close-menu').checked = false;">
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="#top3">Produtos</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
                     <li><a href="#gallery">Quem somos</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
@@ -80,12 +80,15 @@
     <!-- Seção de Detalhes -->
     <section class="section white-bg">
     <div class="main-content left-content">
-        <div class="product-image">
+        <div class="intro-img-column">
             <img
                 src="img/FotoLimpaTelhaVerso.png"
                 alt="Verso do Produto Limpa Telha"
                 class="zoom-on-hover product-lightbox"
             />
+            <a href="Limpa-Telha-Realysa.html" class="cta-button" >
+                Compre Agora! <i class="fa fa-whatsapp" style="font-size:24px; margin-left:10px"></i></i>
+            </a>
         </div>
         <div class="content-column">
 
@@ -122,21 +125,125 @@
     </div>
     </section>
 
-
-    <!-- Seção com QR Code -->
-<!-- Seção com QR Code -->
     <section class="section main-bg">
-    <div class="main-content qr-section" style="text-align: center;">
-        <h2 class="highlight-title">Aprenda a Utilizar</h2>
-        <p class="qr-instructions">
-        Escaneie o QR Code abaixo presente no produto ou clique na imagem para ver o passo a passo de como aplicar corretamente:
-        </p>
-
-        <a href="https://www.realysa.com.br/limpatelha2025.pdf" target="_blank" class="qr-link">
-        <img src="img/QR-code.png" alt="QR Code para Instruções de Uso" class="qr-image" />
-        </a>
-    </div>
+    <div class="main-content qr-video-grid ">
+        <div class="qr-text">
+            <h2 class="highlight-title">Aprenda a Utilizar</h2>
+            <p class="qr-instructions">
+                Escaneie o QR Code presente no produto ou assista ao vídeo para ver o passo a passo de como aplicar corretamente:
+            </p>
+        </div>
+        <div class="qr-code">
+            <a href="https://www.realysa.com.br/limpatelha2025.pdf" target="_blank">
+                <img src="img/QR-code.png" alt="QR Code para Instruções de Uso" class="qr-image" />
+            </a>
+        </div>
+        <div class="qr-video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/jsb2xwPxc0g"
+                title="Como aplicar o Limpa Telha Realysa"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+        </div>
     </section>
+
+    <section class="white-bg faq-section">
+        <div class="main-content">
+            <h2 class="highlight-title">Dúvidas Frequentes</h2>
+            <div class="faq-container">
+
+                <div class="faq-item">
+                    <button class="faq-question">1. Preciso esfregar o telhado após aplicar o produto?</button>
+                    <div class="faq-answer">Não! Basta aplicar o Limpa Telha Realysa e aguardar. A sujeira se dissolve com o tempo, sem necessidade de esfregar.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">2. Pode ser usado em muros e calçadas?</button>
+                    <div class="faq-answer">Sim. O produto é versátil e funciona em telhados, muros, calçadas, paredes externas e pisos.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">3. Quanto tempo demora para ver resultado?</button>
+                    <div class="faq-answer">O efeito começa a aparecer em minutos, mas o resultado completo pode surgir em até 48 horas após a aplicação.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">4. Posso aplicar com qualquer borrifador?</button>
+                    <div class="faq-answer">Sim. Você pode usar borrifador manual ou pulverizador elétrico para aplicação.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">5. A aplicação remove tintas ou danifica a superfície?</button>
+                    <div class="faq-answer">Não. O produto remove fungos, lodo e sujeira sem danificar superfícies ou tintas resistentes.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials-section main-bg">
+        <div class="main-content">
+            <h2 class="highlight-title" style="text-align: center;">O Que Nossos <span>Clientes </span> Dizem</h2>
+            
+            <div class="testimonials-grid">
+
+            <!-- Depoimento com vídeo -->
+            <div class="testimonial-card">
+                <div class="testimonial-video">
+                <iframe src="https://www.youtube.com/embed/jsb2xwPxc0g" title="Depoimento Cliente 1" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <p class="testimonial-name">Carlos, RJ</p>
+                <p class="testimonial-text">"Simplesmente fantástico! Meu telhado parecia novo após a aplicação. Fácil de usar e sem esforço!"</p>
+            </div>
+
+            <!-- Depoimento com vídeo -->
+            <div class="testimonial-card">
+                <div class="testimonial-video">
+                <iframe src="https://www.youtube.com/embed/jsb2xwPxc0g" title="Depoimento Cliente 2" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <p class="testimonial-name">Fernanda, SP</p>
+                <p class="testimonial-text">"Achei que teria que trocar as telhas. O produto fez uma limpeza incrível. Recomendo muito!"</p>
+            </div>
+
+            <!-- Depoimento só com texto -->
+            <div class="testimonial-card">
+                <div class="testimonial-video">
+                <iframe src="https://www.youtube.com/embed/jsb2xwPxc0g" title="Depoimento Cliente 2" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <p class="testimonial-name">José, SP</p>
+                <p class="testimonial-text">"Achei que teria que trocar as telhas. O produto fez uma limpeza incrível. Recomendo muito!"</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-video">
+                <iframe src="https://www.youtube.com/embed/jsb2xwPxc0g" title="Depoimento Cliente 2" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <p class="testimonial-name">Harry, SP</p>
+                <p class="testimonial-text">"Achei que teria que trocar as telhas. O produto fez uma limpeza incrível. Recomendo muito!"</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-video">
+                <iframe src="https://www.youtube.com/embed/jsb2xwPxc0g" title="Depoimento Cliente 2" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <p class="testimonial-name">Nylon, SP</p>
+                <p class="testimonial-text">"Achei que teria que trocar as telhas. O produto fez uma limpeza incrível. Recomendo muito!"</p>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -168,6 +275,49 @@
     </div>
     </footer>
 
+    <script>
+    const grid = document.querySelector('.testimonials-grid');
+    const cards = document.querySelectorAll('.testimonial-card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+        const isMobile = window.innerWidth <= 700;
+
+        // Remover classes anteriores
+        document.querySelectorAll('.testimonial-card').forEach(c => {
+            c.classList.remove('expanded');
+            c.classList.remove('single-on-row');
+        });
+
+        if (isMobile) {
+            // No mobile: apenas aplica a classe expanded sem mover ou rolar
+            card.classList.add('expanded');
+        } else {
+            // No desktop: move para o topo e rola suavemente
+            grid.prepend(card);
+            card.classList.add('expanded');
+
+            // Aguarda DOM atualizar antes de rolar
+            setTimeout(() => {
+            card.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            }, 100);
+        }
+        });
+    });
+    </script>
+
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+            const item = button.parentElement;
+            item.classList.toggle('active');
+            });
+        });
+    </script>
     <script>
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
