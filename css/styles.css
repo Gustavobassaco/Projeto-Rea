@@ -243,7 +243,7 @@ tfoot {
 
 .carousel-images {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
 }
@@ -251,7 +251,7 @@ tfoot {
 .carousel-images img {
     width: 100%;
     max-width: 33rem;
-    margin: 0 10px;
+    margin: 0 0px;
     border-radius: 8px;
     flex-shrink: 0;
 }
@@ -294,6 +294,11 @@ tfoot {
     right: 0;
 }
 
+.h2-size{
+    font-size: 4rem; 
+    text-align: center;
+    margin-top: 4rem;
+}
 
 .highlight-title {
     font-size: 4rem;
@@ -434,12 +439,13 @@ tfoot {
     background-color: #f8f8f8;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
     transform: scale(1.01);
-    max-width: 900px;     
-    margin: 0 0.5rem;        
+    max-width: 900px;
+    margin: 0 0.5rem;
 }
 
 .testimonial-card.single-on-row {
-  margin: 0 auto; /* centraliza visualmente */
+    margin: 0 auto;
+    /* centraliza visualmente */
 }
 
 
@@ -600,8 +606,6 @@ tfoot {
 
 h2 .highlight {
     color: var(--orange);
-
-    /* laranja forte */
 }
 
 .intro-text p {
@@ -865,7 +869,7 @@ h2 .highlight {
 
 .benefits-list {
     list-style: none;
-    padding: 0;
+    padding: 2rem 0;
     margin: 0;
 }
 
@@ -957,15 +961,26 @@ h2 .highlight {
     background-color: var(--orange);
 }
 
+.product-grid-h2{
+    text-align: center;
+    font-size: 4rem;
+    text-transform: none;
+}
 
 .product-card {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
+    width: 100%;
     max-width: 250px;
-    transition: box-shadow 0.3s ease;
+    height: 320px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     background: #fff;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease;
 }
 
 .product-card:hover {
@@ -974,24 +989,47 @@ h2 .highlight {
 
 .product-card img {
     width: 100%;
-    height: auto;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    background-color: #f9f9f9;
     border-radius: 6px;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease-in-out;
+
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    padding-bottom: 4rem;
 }
 
 .product-title {
-    margin-top: 1rem;
     font-size: 1.4rem;
+    text-align: center;
     font-weight: bold;
     color: #333;
+    margin-top: 1rem;
     text-decoration: none;
-    display: block;
 }
+
+.product-card {
+        max-width: 180px;
+        height: auto;
+        padding: 0.5rem 0.75rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
 .product-title:hover {
     color: var(--primary-color);
     text-decoration: underline;
 }
+
+
 
 textarea {
     height: 20rem;
@@ -1119,12 +1157,14 @@ li:last-child {
         padding-bottom: 4rem;
     }
 
-    .intro-img img {
-        width: 30%;
-        max-width: 200px;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+    .intro-img img,
+    .intro-img-column img {
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 16px;
+    background-color: #fff;
+    padding: 10px;
     }
 
     .content-column {
@@ -1233,13 +1273,6 @@ li:last-child {
         padding-bottom: 4rem;
     }
 
-    .intro-img-column img {
-        width: 45vw;
-        height: auto;
-        max-width: 200px;
-        aspect-ratio: 3 / 4;
-    }
-
     .carousel-container {
         padding: 0 1rem;
     }
@@ -1263,11 +1296,51 @@ li:last-child {
     }
 }
 
+@media(max-width: 40rem){
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-card {
+        max-width: 180px;
+        height: auto;
+        padding: 0.5rem 0.75rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card img {
+        height: auto;
+        max-height: 140px;
+        width: auto;
+        object-fit: contain;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-title {
+        font-size: 1rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    .h2-size,
+    .product-grid-h2,
+    .intro-text h2,
+    .highlight-title,
+    .section2 h2,
+    h2 .highlight,
+    .content-column h2{
+    font-size: 2.6rem;
+    }
+
+}
+
 @media (max-width: 35rem) {
 
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
 
     .grid-gallery,
     .grid-top3 {

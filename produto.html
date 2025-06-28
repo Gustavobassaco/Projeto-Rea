@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="titulo-pagina">Produto</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/elements.css" />
+    <link rel="stylesheet" href="css/classes.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header e menu mantidos -->
+    <div id="lightbox" class="lightbox hidden">
+        <img id="lightbox-img" src="" alt="Imagem ampliada" />
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html">
+            <img src="img/logo completa.png" alt="Logo Realysa" class="logo" />
+        </a>
+    </header>
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="close-menu" role="button" />
+    <label class="close-menu-label" for="close-menu" title="close-menu"></label>
+    <aside class="menu white-bg">
+        <div class="main-content menu-content">
+            <nav>
+                <ul onclick="getElementById('close-menu').checked = false;">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="#gallery">Quem somos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Intro -->
+    <section class="section main-bg">
+        <div class="main-content intro-content">
+            <div class="intro-text">
+                <h2 id="tituloPagina"></h2>
+                <p id="descricaoProduto"></p>
+                <a href="#" id="botaoCTA" class="cta-button" target="_blank">Quero limpar meu telhado!</a>
+            </div>
+            <div class="intro-img">
+                <img id="imagemPrincipal" class="zoom-on-hover product-lightbox" style="cursor: zoom-in" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalhes -->
+    <section class="section white-bg">
+        <div class="main-content left-content">
+            <div class="intro-img-column">
+                <img id="imagemVerso" class="zoom-on-hover product-lightbox" />
+                <a id="botaoCompra" class="cta-button" target="_blank">
+                    Compre Agora!
+                    <i class="fa fa-whatsapp" style="font-size: 24px; margin-left: 10px"></i>
+                </a>
+            </div>
+            <div class="content-column">
+                <h2>Detalhes do <span class="highlight">Produto</span></h2>
+                <ul class="benefits-list" id="listaCaracteristicas"></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrossel de imagens -->
+    <section class="section white-bg carrossel" id="carrosselResultados">
+        <!-- Conteúdo será inserido via JS -->
+    </section>
+
+    <!-- QR Code e vídeo -->
+    <section class="section main-bg">
+        <div class="main-content qr-video-grid">
+            <div class="qr-text">
+                <h2 class="highlight-title">Aprenda a Utilizar</h2>
+                <p class="qr-instructions">
+                    Escaneie o QR Code presente no produto ou assista ao vídeo para ver
+                    o passo a passo:
+                </p>
+            </div>
+            <div class="qr-code">
+                <a id="linkQrCode" target="_blank">
+                    <img src="img/QR-code.png" alt="QR Code para Instruções de Uso" class="qr-image" />
+                </a>
+            </div>
+            <div class="qr-video-wrapper">
+                <iframe id="videoTutorial" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="white-bg faq-section">
+        <div class="main-content">
+            <h2 class="highlight-title">Dúvidas Frequentes</h2>
+            <div class="faq-container" id="faqContainer"></div>
+        </div>
+    </section>
+    <!-- Depoimentos -->
+    <section class="section testimonials-section main-bg">
+        <div class="main-content">
+            <h2 class="highlight-title" style="text-align: center">
+                O Que Nossos <span>Clientes </span> Dizem
+            </h2>
+            <div class="testimonials-grid" id="depoimentosContainer"></div>
+        </div>
+    </section>
+
+    <!-- Footer mantido -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="img/Logo_Realysa_completa.png" alt="Logo Realysa" class="footer-logo" />
+                <p>Limpeza profissional com mais de <br>20 anos de confiança.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegue</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#top3">Produtos</a></li>
+                    <li><a href="#work">Resultados</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Fale conosco</h4>
+                <p><a href="mailto:contato@realysa.com.br">contato@realysa.com.br</a></p>
+                <p><a href="https://wa.me/5521999999999" target="_blank">WhatsApp: (21) 99999‑9999</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Realysa Produtos Químicos Ltda. CNPJ 00.000.000/0001-00</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    </script>
+
+    <script>
+        // Script para reordenação e maximização de cards
+        const grid = document.querySelector('.testimonials-grid');
+        const cards = document.querySelectorAll('.testimonial-card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const isMobile = window.innerWidth <= 700;
+
+                // Remover classes anteriores
+                document.querySelectorAll('.testimonial-card').forEach(c => {
+                    c.classList.remove('expanded');
+                    c.classList.remove('single-on-row');
+                });
+
+                if (isMobile) {
+                    // No mobile: apenas aplica a classe expanded sem mover ou rolar
+                    card.classList.add('expanded');
+                } else {
+                    // No desktop: move para o topo e rola suavemente
+                    grid.prepend(card);
+                    card.classList.add('expanded');
+
+                    // Aguarda DOM atualizar antes de rolar
+                    setTimeout(() => {
+                        card.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 100);
+                }
+            });
+        });
+    </script>
+
+
+    <script>
+        // Script para sessão  de perguntas
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <script>
+        // --- Lightbox com zoom para todas imagens clicáveis ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        let scale = 1;
+    document.addEventListener('click', (e) => {
+    const alvo = e.target.closest('img.zoomable');
+    if (!alvo) return;                       // clicou em outra coisa
+    lightboxImg.src = alvo.src;
+    lightbox.classList.remove('hidden');
+    scale = 1;
+    lightboxImg.style.transform = 'scale(1)';
+    });
+        // Combina imagens do carrossel e do produto
+        const zoomableImages = [
+            ...document.querySelectorAll('.carousel-images img'),
+            ...document.querySelectorAll('.product-lightbox')
+        ];
+
+        // Clique para abrir lightbox
+        zoomableImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.remove('hidden');
+                scale = 1;
+                lightboxImg.style.transform = 'scale(1)';
+                lightboxImg.style.transformOrigin = 'center center';
+            });
+        });
+
+        // Zoom com rolagem do mouse
+        lightboxImg.addEventListener('wheel', (e) => {
+            e.preventDefault();
+
+            const rect = lightboxImg.getBoundingClientRect();
+            const offsetX = e.clientX - rect.left;
+            const offsetY = e.clientY - rect.top;
+
+            const percentX = (offsetX / rect.width) * 100;
+            const percentY = (offsetY / rect.height) * 100;
+
+            const delta = e.deltaY < 0 ? 0.1 : -0.1;
+            scale += delta;
+            scale = Math.min(Math.max(1, scale), 3);
+
+            lightboxImg.style.transformOrigin = `${percentX}% ${percentY}%`;
+            lightboxImg.style.transform = `scale(${scale})`;
+        });
+
+        // Clicar fora da imagem fecha o lightbox
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target === lightboxImg) {
+                lightbox.classList.add('hidden');
+                lightboxImg.src = '';
+                scale = 1;
+                lightboxImg.style.transform = 'scale(1)';
+                lightboxImg.style.transformOrigin = 'center center';
+            }
+        });
+    </script>
+
+
+
+    <!-- Script para carregar o JSON -->
+    <script>
+        async function carregarProduto() {
+            const params = new URLSearchParams(window.location.search);
+            const slug = params.get("produto")?.toLowerCase();
+            const res = await fetch("produtos.json");
+            const produtos = await res.json();
+            const produto = produtos.find((p) => p.slug === slug);
+
+            if (!produto) {
+                document.body.innerHTML =
+                    "<h2 style='padding: 2rem; text-align:center;'>Produto não encontrado</h2>";
+                return;
+            }
+
+            // Preencher dados básicos
+            document.title = produto.nome;
+            document.getElementById("tituloPagina").innerHTML =
+                produto.tituloPagina;
+            document.getElementById("descricaoProduto").innerHTML =
+                produto.descricao;
+            document.getElementById("botaoCTA").href =
+                "https://wa.me/5521999999999";
+            document.getElementById("imagemPrincipal").src = produto.imagens[0];
+            document.getElementById("imagemVerso").src = produto.imagens[1];
+            document.getElementById("botaoCompra").href =
+                "https://wa.me/5521999999999";
+
+            // Características
+            const lista = document.getElementById("listaCaracteristicas");
+            produto["caracteristicas-full"].forEach((texto, i) => {
+                const li = document.createElement("li");
+                li.setAttribute("data-aos", "fade-up");
+                li.setAttribute("data-aos-delay", `${100 * (i + 1)}`);
+                li.innerHTML = texto;
+                lista.appendChild(li);
+            });
+
+            // QR Code e vídeo
+            document.getElementById("linkQrCode").href = produto.linkQrCode;
+            document.getElementById("videoTutorial").src = produto.videoTutorial;
+
+            // FAQ
+            const faqContainer = document.getElementById("faqContainer");
+            produto.faq.forEach((item, i) => {
+                const div = document.createElement("div");
+                div.className = "faq-item";
+                div.innerHTML = `
+      <button class="faq-question">${i + 1}. ${item.pergunta}</button>
+      <div class="faq-answer">${item.resposta}</div>
+    `;
+                faqContainer.appendChild(div);
+            });
+
+            // Depoimentos
+            const depoimentosContainer = document.getElementById(
+                "depoimentosContainer"
+            );
+            produto.depoimentos.forEach((dep) => {
+                const div = document.createElement("div");
+                div.className = "testimonial-card";
+                div.innerHTML = `
+      <div class="testimonial-video">
+        <iframe src="${dep.video}" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p class="testimonial-name">${dep.nome}</p>
+      <p class="testimonial-text">"${dep.texto}"</p>
+    `;
+                depoimentosContainer.appendChild(div);
+            });
+
+            // Reaplicar eventos de FAQ toggle
+            document.querySelectorAll(".faq-question").forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    btn.parentElement.classList.toggle("active");
+                });
+            });
+
+            // ✅ Adiciona evento de foco ao clicar no depoimento
+            const grid = document.querySelector(".testimonials-grid");
+            const cards = document.querySelectorAll(".testimonial-card");
+
+            cards.forEach((card) => {
+                card.addEventListener("click", () => {
+                    const isMobile = window.innerWidth <= 700;
+
+                    document.querySelectorAll(".testimonial-card").forEach((c) => {
+                        c.classList.remove("expanded");
+                        c.classList.remove("single-on-row");
+                    });
+
+                    if (isMobile) {
+                        card.classList.add("expanded");
+                    } else {
+                        grid.prepend(card);
+                        card.classList.add("expanded");
+                        setTimeout(() => {
+                            card.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }, 100);
+                    }
+                });
+            });
+
+            const carrosselContainer = document.getElementById("carrosselResultados");
+
+            if (produto.antesDepois && Array.isArray(produto.antesDepois)) {
+                /* 1. Injeta o HTML-base */
+                carrosselContainer.innerHTML = `
+      <div class="main-content section2">
+        <h2><span class="highlight">Veja os</span> Resultados</h2>
+        <p class="desc-resultados">
+          Transformações reais feitas com nosso produto. Compare o antes e depois.
+        </p>
+        <div class="carousel-container">
+          <button class="carousel-btn" id="prev">&#10094;</button>
+          <div class="carousel-images" id="carouselImgs"></div>
+          <button class="carousel-btn" id="next">&#10095;</button>
+        </div>
+      </div>
+    `;
+
+                /* 2. Preenche as imagens */
+                const imagesBox = document.getElementById("carouselImgs");
+                produto.antesDepois.forEach((par, i) => {
+                    ["antes", "depois"].forEach((lado) => {
+                        const img = document.createElement("img");
+                        img.className = 'zoomable';
+                        img.src = par[lado];
+                        img.alt = `${lado === "antes" ? "Antes" : "Depois"} ${i + 1}`;
+                        imagesBox.appendChild(img);
+                    });
+                });
+
+                /* 3. (Re)monta o módulo de carrossel  */
+                let current = 0;
+                const imgs = imagesBox.querySelectorAll("img");
+                // mostrar sempre 1 imagem por slide
+                const imgsPerView = () => 1;
+                const imgW       = () => imgs[0].offsetWidth + 20;       
+                const maxIndex   = () => imgs.length - 1;                
+
+                function slide() {
+                    imagesBox.style.transform =
+                        `translateX(${-(current * imgW() * imgsPerView())}px)`;
+                }
+                document.getElementById("prev").onclick = () => {
+                    if (current > 0) { current--; slide(); }
+                };
+                document.getElementById("next").onclick = () => {
+                    if (current < maxIndex()) { current++; slide(); }
+                };
+                addEventListener("resize", slide);
+                slide();                       // posiciona no load
+
+                /* 4. Reanexa o lightbox para as novas <img> */
+                imgs.forEach((im) => {
+                    im.addEventListener("click", () => {
+                        lightboxImg.src = im.src;
+                        lightbox.classList.remove("hidden");
+                        scale = 1;
+                        lightboxImg.style.transform = "scale(1)";
+                    });
+                });
+            }
+        }
+        carregarProduto();
+    </script>
+
+
+</body>
+
+</html>
