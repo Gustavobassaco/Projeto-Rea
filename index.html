@@ -36,7 +36,7 @@
         <ul onclick="getElementById('close-menu').checked = false;">
           <li><a href="index.html">Início</a></li>
           <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="#gallery">Quem somos</a></li>
+          <li><a href="quem-somos.html">Quem somos</a></li>
           <li><a href="#contact">Contato</a></li>
         </ul>
       </nav>
@@ -63,22 +63,27 @@
       <div class="intro-text">
         <h2><span class="highlight">Sobre</span> a Realysa</h2>
         <p>
-          A Realysa é referência em soluções de limpeza há mais de 20 anos.
-          Com produtos testados, resultados comprovados e a confiança de
-          milhares de clientes, nossa missão é transformar superfícies de
-          forma prática e eficaz. Atuamos com foco em qualidade, inovação e
-          satisfação.
+          A Realysa nasce da experiência de mais de 20 anos com soluções que transformam o cuidado com ambientes.
+          De um produto consagrado, o Limpa Telha, evoluímos para uma marca completa, com novos produtos e um propósito
+          ainda maior:
+          oferecer limpeza, restauração e confiança em cada aplicação.
+        </p>
+        <p>
+          Com essência familiar, responsabilidade ambiental e foco em qualidade, atendemos com carinho, transparência e
+          compromisso.
+          Realysa é mais do que limpeza — é transformação com propósito.
         </p>
       </div>
       <div class="intro-img">
         <img src="img/logo_miniatura.png" alt="Nossa Empresa" style="
-              max-width: 100%;
-              border-radius: 12px;
-              box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-            " />
+          max-width: 100%;
+          border-radius: 12px;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        " />
       </div>
     </div>
   </section>
+
   <section>
     <div class="main-content">
       <h2 class="h2-size">Conheça nossos produtos</h2>
@@ -92,16 +97,16 @@
     <div class="footer-content">
       <div class="footer-brand">
         <img src="img/Logo_Realysa_completa.png" alt="Logo Realysa" class="footer-logo" />
-        <p>Limpeza profissional com mais de <br />20 anos de confiança.</p>
+        <p>Porque realizar é transformar, cuidar <br>e fazer com o coração.</p>
       </div>
 
       <div class="footer-links">
         <h4>Navegue</h4>
         <ul>
           <li><a href="index.html">Início</a></li>
-          <li><a href="#top3">Produtos</a></li>
-          <li><a href="#work">Resultados</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="https://wa.me/5543996963791">Contato</a></li>
         </ul>
       </div>
 
@@ -111,7 +116,7 @@
           <a href="mailto:contato@realysa.com.br">contato@realysa.com.br</a>
         </p>
         <p>
-          <a href="https://wa.me/5521999999999" target="_blank">WhatsApp: (21) 99999‑9999</a>
+          <a href="https://wa.me/5543996963791" target="_blank">WhatsApp: (43) 99696-3791</a>
         </p>
       </div>
     </div>
@@ -212,7 +217,8 @@
         linkImg1.appendChild(img1);
 
         const botao1 = document.createElement("a");
-        botao1.href = `produto.html?produto=${produto.slug}`;
+        botao1.href = href = "https://wa.me/5543996963791";
+        botao1.target = "_blank"; 
         botao1.className = "cta-button";
         botao1.innerHTML = `Compre Agora! <i class="fa fa-whatsapp" style="font-size:24px; margin-left:10px"></i>`;
 
@@ -272,7 +278,8 @@
         linkImg2.appendChild(img2);
 
         const botao2 = document.createElement("a");
-        botao2.href = `produto.html?produto=${produto.slug}`;
+        botao2.href = "https://wa.me/5543996963791";
+        botao2.target = "_blank"; 
         botao2.className = "cta-button";
         botao2.innerHTML = `Compre Agora! <i class="fa fa-whatsapp" style="font-size:24px; margin-left:10px"></i>`;
 

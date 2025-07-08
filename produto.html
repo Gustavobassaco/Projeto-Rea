@@ -36,8 +36,8 @@
                 <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="index.html">Início</a></li>
                     <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="#gallery">Quem somos</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="quem-somos.html">Quem somos</a></li>
+                    <li><a href="https://wa.me/5543996963791", target="_blank">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -75,36 +75,59 @@
     </section>
 
     <!-- Carrossel de imagens -->
-    <section class="section white-bg carrossel" id="carrosselResultados">
+    <section class="section main-bg carrossel" id="carrosselResultados">
         <!-- Conteúdo será inserido via JS -->
     </section>
 
     <!-- QR Code e vídeo -->
-    <section class="section main-bg">
+    <section class="section white-bg qr-section">
         <div class="main-content qr-video-grid">
             <div class="qr-text">
                 <h2 class="highlight-title">Aprenda a Utilizar</h2>
                 <p class="qr-instructions">
-                    Escaneie o QR Code presente no produto ou assista ao vídeo para ver
-                    o passo a passo:
+                    Escaneie o QR Code presente no produto ou assista ao vídeo para ver o passo a passo:
                 </p>
             </div>
-            <div class="qr-code">
-                <a id="linkQrCode" target="_blank">
-                    <img src="img/QR-code.png" alt="QR Code para Instruções de Uso" class="qr-image" />
-                </a>
-            </div>
-            <div class="qr-video-wrapper">
-                <iframe id="videoTutorial" allowfullscreen></iframe>
+
+            <div class="qr-media">
+                <div class="qr-code">
+                    <a id="linkQrCode" target="_blank">
+                        <img src="img/QR-code.png" alt="QR Code para Instruções de Uso" class="qr-image" />
+                    </a>
+                </div>
+                <div class="qr-video-wrapper">
+                    <iframe id="videoTutorial" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </section>
+
+
+    <!-- Especificações-->
+    <section class="section main-bg specs-section" id="especificacoes-finalidades">
+        <div class="specs-inner">
+            <div class="specs-list">
+                <h3>Especificações Técnicas</h3>
+                <ul id="especificacoesList"></ul>
+            </div>
+
+            <div class="finalidades-list">
+                <h3>Finalidades</h3>
+                <ul id="finalidadesList"></ul>
+            </div>
+        </div>
+    </section>
+
 
     <!-- FAQ -->
     <section class="white-bg faq-section">
         <div class="main-content">
             <h2 class="highlight-title">Dúvidas Frequentes</h2>
             <div class="faq-container" id="faqContainer"></div>
+            <a id="botaoCompra" class="cta-button" target="_blank"style="margin-top: 40px; ">
+                    Compre Agora!
+                    <i class="fa fa-whatsapp" style="font-size: 24px; margin-left: 10px;"></i>
+                </a>
         </div>
     </section>
     <!-- Depoimentos -->
@@ -114,31 +137,38 @@
                 O Que Nossos <span>Clientes </span> Dizem
             </h2>
             <div class="testimonials-grid" id="depoimentosContainer"></div>
+                        <a id="botaoCompra" class="cta-button" target="_blank"style="margin-top: 40px;">
+                    Compre Agora!
+                    <i class="fa fa-whatsapp" style="font-size: 24px; margin-left: 10px;"></i>
+                </a>
         </div>
     </section>
 
-    <!-- Footer mantido -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
                 <img src="img/Logo_Realysa_completa.png" alt="Logo Realysa" class="footer-logo" />
-                <p>Limpeza profissional com mais de <br>20 anos de confiança.</p>
+                <p>Porque realizar é transformar, cuidar <br>e fazer com o coração.</p>
             </div>
 
             <div class="footer-links">
                 <h4>Navegue</h4>
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="#top3">Produtos</a></li>
-                    <li><a href="#work">Resultados</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
+                    <li><a href="https://wa.me/5543996963791">Contato</a></li>
                 </ul>
             </div>
 
             <div class="footer-contact">
                 <h4>Fale conosco</h4>
-                <p><a href="mailto:contato@realysa.com.br">contato@realysa.com.br</a></p>
-                <p><a href="https://wa.me/5521999999999" target="_blank">WhatsApp: (21) 99999‑9999</a></p>
+                <p>
+                    <a href="mailto:contato@realysa.com.br">contato@realysa.com.br</a>
+                </p>
+                <p>
+                    <a href="https://wa.me/5543996963791" target="_blank">WhatsApp: (43) 99696-3791</a>
+                </p>
             </div>
         </div>
 
@@ -157,32 +187,32 @@
 
     <script>
         // Script para reordenação e maximização de cards
-        const grid = document.querySelector('.testimonials-grid');
-        const cards = document.querySelectorAll('.testimonial-card');
+        const grid = document.querySelector(".testimonials-grid");
+        const cards = document.querySelectorAll(".testimonial-card");
 
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
+        cards.forEach((card) => {
+            card.addEventListener("click", () => {
                 const isMobile = window.innerWidth <= 700;
 
                 // Remover classes anteriores
-                document.querySelectorAll('.testimonial-card').forEach(c => {
-                    c.classList.remove('expanded');
-                    c.classList.remove('single-on-row');
+                document.querySelectorAll(".testimonial-card").forEach((c) => {
+                    c.classList.remove("expanded");
+                    c.classList.remove("single-on-row");
                 });
 
                 if (isMobile) {
                     // No mobile: apenas aplica a classe expanded sem mover ou rolar
-                    card.classList.add('expanded');
+                    card.classList.add("expanded");
                 } else {
                     // No desktop: move para o topo e rola suavemente
                     grid.prepend(card);
-                    card.classList.add('expanded');
+                    card.classList.add("expanded");
 
                     // Aguarda DOM atualizar antes de rolar
                     setTimeout(() => {
                         card.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
+                            behavior: "smooth",
+                            block: "start",
                         });
                     }, 100);
                 }
@@ -190,49 +220,49 @@
         });
     </script>
 
-
     <script>
         // Script para sessão  de perguntas
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
+        document.querySelectorAll(".faq-question").forEach((button) => {
+            button.addEventListener("click", () => {
                 const item = button.parentElement;
-                item.classList.toggle('active');
+                item.classList.toggle("active");
             });
         });
+
     </script>
 
     <script>
         // --- Lightbox com zoom para todas imagens clicáveis ---
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
         let scale = 1;
-    document.addEventListener('click', (e) => {
-    const alvo = e.target.closest('img.zoomable');
-    if (!alvo) return;                       // clicou em outra coisa
-    lightboxImg.src = alvo.src;
-    lightbox.classList.remove('hidden');
-    scale = 1;
-    lightboxImg.style.transform = 'scale(1)';
-    });
+        document.addEventListener("click", (e) => {
+            const alvo = e.target.closest("img.zoomable");
+            if (!alvo) return; // clicou em outra coisa
+            lightboxImg.src = alvo.src;
+            lightbox.classList.remove("hidden");
+            scale = 1;
+            lightboxImg.style.transform = "scale(1)";
+        });
         // Combina imagens do carrossel e do produto
         const zoomableImages = [
-            ...document.querySelectorAll('.carousel-images img'),
-            ...document.querySelectorAll('.product-lightbox')
+            ...document.querySelectorAll(".carousel-images img"),
+            ...document.querySelectorAll(".product-lightbox"),
         ];
 
         // Clique para abrir lightbox
-        zoomableImages.forEach(img => {
-            img.addEventListener('click', () => {
+        zoomableImages.forEach((img) => {
+            img.addEventListener("click", () => {
                 lightboxImg.src = img.src;
-                lightbox.classList.remove('hidden');
+                lightbox.classList.remove("hidden");
                 scale = 1;
-                lightboxImg.style.transform = 'scale(1)';
-                lightboxImg.style.transformOrigin = 'center center';
+                lightboxImg.style.transform = "scale(1)";
+                lightboxImg.style.transformOrigin = "center center";
             });
         });
 
         // Zoom com rolagem do mouse
-        lightboxImg.addEventListener('wheel', (e) => {
+        lightboxImg.addEventListener("wheel", (e) => {
             e.preventDefault();
 
             const rect = lightboxImg.getBoundingClientRect();
@@ -251,18 +281,16 @@
         });
 
         // Clicar fora da imagem fecha o lightbox
-        lightbox.addEventListener('click', (e) => {
+        lightbox.addEventListener("click", (e) => {
             if (e.target === lightbox || e.target === lightboxImg) {
-                lightbox.classList.add('hidden');
-                lightboxImg.src = '';
+                lightbox.classList.add("hidden");
+                lightboxImg.src = "";
                 scale = 1;
-                lightboxImg.style.transform = 'scale(1)';
-                lightboxImg.style.transformOrigin = 'center center';
+                lightboxImg.style.transform = "scale(1)";
+                lightboxImg.style.transformOrigin = "center center";
             }
         });
     </script>
-
-
 
     <!-- Script para carregar o JSON -->
     <script>
@@ -286,11 +314,11 @@
             document.getElementById("descricaoProduto").innerHTML =
                 produto.descricao;
             document.getElementById("botaoCTA").href =
-                "https://wa.me/5521999999999";
+                "https://wa.me/5543996963791";
             document.getElementById("imagemPrincipal").src = produto.imagens[0];
             document.getElementById("imagemVerso").src = produto.imagens[1];
             document.getElementById("botaoCompra").href =
-                "https://wa.me/5521999999999";
+                "https://wa.me/5543996963791";
 
             // Características
             const lista = document.getElementById("listaCaracteristicas");
@@ -330,7 +358,7 @@
         <iframe src="${dep.video}" frameborder="0" allowfullscreen></iframe>
       </div>
       <p class="testimonial-name">${dep.nome}</p>
-      <p class="testimonial-text">"${dep.texto}"</p>
+      <p class="testimonial-text">${dep.texto}</p>
     `;
                 depoimentosContainer.appendChild(div);
             });
@@ -367,7 +395,29 @@
                 });
             });
 
-            const carrosselContainer = document.getElementById("carrosselResultados");
+
+            // Especificações
+            const listaEspecificacoes = document.getElementById("especificacoesList");
+            if (produto.especificacoes) {
+                Object.entries(produto.especificacoes).forEach(([chave, valor]) => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `<strong>${chave}:</strong> ${valor}`;
+                    listaEspecificacoes.appendChild(li);
+                });
+            }
+
+            // Finalidades
+            const listaFinalidades = document.getElementById("finalidadesList");
+            if (produto.finalidades) {
+                produto.finalidades.forEach((item) => {
+                    const li = document.createElement("li");
+                    li.textContent = item;
+                    listaFinalidades.appendChild(li);
+                });
+            }
+            const carrosselContainer = document.getElementById(
+                "carrosselResultados"
+            );
 
             if (produto.antesDepois && Array.isArray(produto.antesDepois)) {
                 /* 1. Injeta o HTML-base */
@@ -389,34 +439,50 @@
                 const imagesBox = document.getElementById("carouselImgs");
                 produto.antesDepois.forEach((par, i) => {
                     ["antes", "depois"].forEach((lado) => {
+                        const wrapper = document.createElement("div");
+                        wrapper.className = "carousel-img-wrapper";
+
                         const img = document.createElement("img");
-                        img.className = 'zoomable';
+                        img.className = "zoomable";
                         img.src = par[lado];
                         img.alt = `${lado === "antes" ? "Antes" : "Depois"} ${i + 1}`;
-                        imagesBox.appendChild(img);
+
+                        const label = document.createElement("span");
+                        label.className = "carousel-label";
+                        label.textContent = lado === "antes" ? "Antes" : "Depois";
+
+                        wrapper.appendChild(img);
+                        wrapper.appendChild(label);
+                        imagesBox.appendChild(wrapper);
                     });
                 });
+
 
                 /* 3. (Re)monta o módulo de carrossel  */
                 let current = 0;
                 const imgs = imagesBox.querySelectorAll("img");
                 // mostrar sempre 1 imagem por slide
                 const imgsPerView = () => 1;
-                const imgW       = () => imgs[0].offsetWidth + 20;       
-                const maxIndex   = () => imgs.length - 1;                
+                const imgW = () => imgs[0].offsetWidth + 20;
+                const maxIndex = () => imgs.length - 1;
 
                 function slide() {
-                    imagesBox.style.transform =
-                        `translateX(${-(current * imgW() * imgsPerView())}px)`;
+                    imagesBox.style.transform = `translateX(${-(current * imgW() * imgsPerView())}px)`;
                 }
                 document.getElementById("prev").onclick = () => {
-                    if (current > 0) { current--; slide(); }
+                    if (current > 0) {
+                        current--;
+                        slide();
+                    }
                 };
                 document.getElementById("next").onclick = () => {
-                    if (current < maxIndex()) { current++; slide(); }
+                    if (current < maxIndex()) {
+                        current++;
+                        slide();
+                    }
                 };
                 addEventListener("resize", slide);
-                slide();                       // posiciona no load
+                slide(); // posiciona no load
 
                 /* 4. Reanexa o lightbox para as novas <img> */
                 imgs.forEach((im) => {
@@ -431,8 +497,6 @@
         }
         carregarProduto();
     </script>
-
-
 </body>
 
 </html>
