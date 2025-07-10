@@ -11,7 +11,9 @@
     --white-color: #FFFFFF;
     --gap: 3rem;
     --orange: #f39200;
-    --dark-orange: #d87900
+    --dark-orange: #d87900;
+    color-scheme: only light;
+
 }
 
 body {
@@ -433,7 +435,8 @@ tfoot {
     text-align: left;
     padding: 1rem 1.5rem;
     background: #f5f5f5;
-    font-size: 1.5rem;
+    color: var(--orange);
+    font-size: 1.8rem;
     font-weight: bold;
     border: none;
     outline: none;
@@ -448,9 +451,10 @@ tfoot {
 .faq-answer {
     padding: 1rem 1.5rem;
     display: none;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     background-color: #fafafa;
     border-top: 1px solid #eee;
+    color: var(--dark-blue);
 }
 
 .faq-item.active .faq-answer {
@@ -1207,6 +1211,7 @@ textarea {
     white-space: nowrap;
     color: rgb(64, 64, 150);
     text-decoration: none;
+    font-weight: 600;
 }
 
 .menu-content a:hover {

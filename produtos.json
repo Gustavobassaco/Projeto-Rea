@@ -13,14 +13,18 @@
             "Restaura a cor natural da telha",
             "Alta durabilidade",
             "Elimina fungos, mofo e lodo",
-            "Tecnologia e confiança"
+            "Tecnologia e confiança",
+            "Sem necessidade de enxágue",
+            "Dispensa o uso de WAP"
         ],
         "caracteristicas-full": [
             "<strong>Ação rápida e sem esforço:</strong> Não precisa esfregar! É só pulverizar e aguardar. Em poucos minutos, a sujeira começa a desaparecer.",
             "<strong>Restaura a cor natural da telha:</strong> Revitaliza a aparência original, deixando seu telhado com cara de novo.",
             "<strong>Alta durabilidade:</strong> Forma uma camada protetora que mantém o telhado limpo por muito mais tempo.",
             "<strong>Elimina fungos, mofo e lodo:</strong> Combate microrganismos que causam manchas e deterioração das telhas.",
-            "<strong>Tecnologia e confiança:</strong> Mais de duas décadas de experiência no mercado e resultados comprovados."
+            "<strong>Tecnologia e confiança:</strong> Mais de duas décadas de experiência no mercado e resultados comprovados.",
+            "<strong>Sem necessidade de enxágue:</strong> A fórmula foi desenvolvida para agir sozinha, sem necessidade de lavar após a aplicação.",
+            "<strong>Dispensa o uso de WAP:</strong> Não precisa de lavadora de alta pressão para obter ótimos resultados."
         ],
         "antesDepois": [
             {
@@ -68,6 +72,10 @@
                 "resposta": "De forma alguma. Ele protege e aumenta a durabilidade da superfície."
             },
             {
+                "pergunta": "Pode aplicar em qualquer tipo de telha?",
+                "resposta": "Sim. O produto pode ser usado em qualquer tipo de telha."
+            },
+            {
                 "pergunta": "Qual o rendimento do produto?",
                 "resposta": "Em média, 1 litro cobre de 3 a 4 m², dependendo do tipo de telha e do nível de sujeira."
             },
@@ -82,6 +90,18 @@
             {
                 "pergunta": "Pode aplicar em dias chuvosos?",
                 "resposta": "Não. Aplique em dias secos, com previsão de pelo menos 24h sem chuva."
+            },
+            {
+                "pergunta": "É necessário diluir o produto?",
+                "resposta": "Não. Use o produto diretamente sem diluir."
+            },
+            {
+                "pergunta": "Precisa enxaguar após a aplicação?",
+                "resposta": "Não. Apenas aplique e deixe o produto agir. Não enxague."
+            },
+            {
+                "pergunta": "O produto é um ácido?",
+                "resposta": "Não. Trata-se de um produto com PH alcalino."
             }
         ],
         "especificacoes": {
@@ -92,7 +112,8 @@
             "Rendimento médio": "3 a 4m² por Litro",
             "Aplicação": "Manual por pulverizador",
             "Diluição": "Pronto para uso",
-            "Categoria": "Produto para limpeza e tratamento de telhados"
+            "Categoria": "Produto para limpeza e tratamento de telhados",
+            "PH": "Alcalino"
         },
         "finalidades": [
             "Limpeza e restauração de telhas coloniais",
