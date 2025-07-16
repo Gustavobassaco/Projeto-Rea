@@ -666,6 +666,7 @@ h2 .highlight {
     font-weight: 500;
     color: #444;
     margin-bottom: 30px;
+    text-align: justify;
 }
 
 .intro-img img {
